@@ -1,0 +1,100 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/yellow"
+    android:gravity="center"
+    android:orientation="vertical"
+    android:weightSum="4"
+    tools:context=".UserUrl">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="35sp"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="25dp"
+        android:paddingTop="35dp"
+        android:paddingRight="25dp"
+        android:paddingBottom="35dp">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="@string/api_server_details"
+            android:textSize="30sp"></TextView>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_margin="5sp"
+            android:background="@drawable/name_border"
+            android:gravity="center"
+            android:orientation="vertical">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="@string/enter_the_ip_address_of_the_server"
+                android:textSize="20sp">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/userIp"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:digits="1234567890."
+                android:gravity="center"
+                android:hint="@string/ipv4_address"
+                android:inputType="phone"
+                android:nextFocusDown="@id/userPort"
+                android:paddingBottom="20dp"
+                android:singleLine="true">
+
+                <requestFocus />
+            </EditText>
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="70dp"
+                android:fontFamily="serif"
+                android:gravity="center"
+                android:text="@string/enter_the_port_number_of_the_host"
+                android:textSize="20sp">
+
+            </TextView>
+
+            <EditText
+                android:id="@+id/userPort"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:digits="1234567890."
+                android:gravity="center"
+                android:hint="@string/port_number"
+                android:inputType="phone"
+                android:paddingBottom="20dp"
+                android:singleLine="true"></EditText>
+
+            <Button
+                android:id="@+id/proceed"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="23dp"
+                android:background="@color/black"
+                android:padding="20dp"
+                android:text="@string/proceed"
+                android:textColor="@color/white"></Button>
+        </LinearLayout>
+    </LinearLayout>
+
+</LinearLayout>
